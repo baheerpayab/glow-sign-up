@@ -1,0 +1,181 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgb(15, 15, 15);
+    font-family: 'Figtree', 'Lexend', sans-serif;
+    margin: auto;
+    color: white;
+    overflow-y:hidden;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    background-color: rgb(15, 15, 15, 0.7);
+    height: 50px;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo {
+    margin: auto;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-right: 15px;
+}
+
+.login {
+    margin: auto;
+    font-weight: 700;
+}
+
+.theme {
+    background: none;
+    border: none;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    color: white;
+}
+
+
+/* MAIN */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: 50px;
+}
+
+h2 {
+    display: block;
+    font-size: 100px;
+    font-weight: 700;
+    width: 50vw;
+    cursor: default;
+    position: relative;
+}
+
+.arrowBtn {
+    display: block;
+    margin-left: auto;
+}
+
+.arrow {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48;
+    color: white;
+    scale: 8;
+    
+    margin-right: 280px;
+    animation: backnforth 3s ease-in-out infinite;
+}
+
+
+#tracker {
+    background: linear-gradient(to right, rgb(110, 182, 204), rgb(13, 71, 188));
+    height: 500px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    animation: rotate 20s infinite;
+    z-index: -1;
+}
+
+@keyframes backnforth {
+    0%,
+    100% {
+        transform: translate(0,0)
+    }
+    50% {
+        transform: translate(10px, 0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    50% {
+        scale: 1 1.5;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(100px);
+}
+
+
+
+/* FOOTER */
+
+#reficon {
+    transition: rotate 1s, visibility 0s;
+  }
+  
+  #reficon:hover {
+    transform-origin: center;
+    rotate: 360deg;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 30px;
+    background-color: rgb(15, 15, 15, 0.7);
+  }
+  
+  .fa-github {
+    scale: 1.5;
+    color: white;
+  }
+  
+  .fa-github:hover {
+    transition: 0.3s;
+    scale: 1.7;
+    rotate: 360deg;
+    cursor: pointer;
+  }
