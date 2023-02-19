@@ -10,7 +10,7 @@
 
 ### Project
 
-1st Project of the FullStack JavaScript Path on The Odin Project. 
+1st Project of the FullStack JavaScript Path on The Odin Project. Creating a sign-up webpage along with light/dark themes and mobile compatibility.
 
 #### Learned:
 - cursor-tracking background blur
