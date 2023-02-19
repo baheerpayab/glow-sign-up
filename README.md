@@ -1,8 +1,8 @@
 ## Sign-Up Form - glow.
 
 <p align="center">
-  <img src="/readme-images/dark.png" width="300" alt="project pic">
-  <img src="/readme-images/light.png" width="300" alt="project pic">
+  <img src="/readme-images/dark.png" width="400" alt="project pic">
+  <img src="/readme-images/light.png" width="400" alt="project pic">
 </p>
 <h2 align="center">
 <a href="https://baheerpayab.github.io/glow-sign-up/">Live Demo</a>
