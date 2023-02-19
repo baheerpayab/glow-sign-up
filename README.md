@@ -1,7 +1,8 @@
 ## Sign-Up Form - glow.
 
 <p align="center">
-  <img src="/readme-images/dark.png" width="600" alt="project pic">
+  <img src="/readme-images/dark.png" width="300" alt="project pic">
+  <img src="/readme-images/light.png" width="300" alt="project pic">
 </p>
 <h2 align="center">
 <a href="https://baheerpayab.github.io/glow-sign-up/">Live Demo</a>
@@ -13,6 +14,7 @@
 
 #### Learned:
 - cursor-tracking background blur
+- using custom CSS variables, allowing for light/dark theme
 - making webpages mobile-friendly
 
 ### Built With
