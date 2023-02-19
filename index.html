@@ -18,20 +18,44 @@
             <h1 id="logo" class="logo">glow.</h1>
             <nav id="navbar" class="navbar">
                 <a id="login" class="login">login</a>
-                <button id="theme" class="theme"><span class="material-symbols-outlined">
-                    light_mode
-                    </span></button>
+                <button type="button" id="theme" class="theme"><span id="theme-icon" class="material-symbols-outlined">light_mode</span></button>
             </nav>
         </header>
         <main>
             <div id="tracker"></div>
             <div id="blur"></div>
             <div class="container">
-            <h2>Unleash your true potential.</h2>
-            <a href="#" class="arrowBtn"><span class="material-symbols-outlined arrow">
-            double_arrow
-                </span>
-            </a>
+                <h2>Unleash your true potential.</h2>
+                <div class="signup">
+                    <h3>Sign-Up</h3>
+                    <form class="form" action="#">
+                        <div>
+                            <label for="first-name">First Name</label>
+                            <input id="first-name" name="first-name" type="text" required />
+                        </div>
+                        <div>
+                            <label>Last Name</label>
+                            <input id="first-name" name="last-name" type="text" required />
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        <div>
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" name="phone-number" required />
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" minlength="8" required />
+                        </div>
+                        <div>
+                            <label>Confirm Password</label>
+                            <input type="password" id="confirm" name="confirmed" minlength="8" required />
+                        </div>
+                        <button id="submit" class="submit" type="submit">Unleash</button>
+                    </form>
+                </div>
             </div>
         </main>
         <footer>

@@ -1,12 +1,26 @@
+:root.dark {
+    --border-color: white;
+    --text-color: white;
+    --background-color: rgb(15, 15, 15);
+    --hf-color: rgb(15, 15, 15, 0.7);
+}
+
+:root.light {
+    --border-color: rgb(15, 15, 15);
+    --text-color: rgb(15, 15, 15);
+    --background-color: white;
+    --hf-color: rgba(255, 255, 255, 0.5);
+}
+
 body {
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background-color: rgb(15, 15, 15);
+    background-color: var(--background-color);
     font-family: 'Figtree', 'Lexend', sans-serif;
     margin: auto;
-    color: white;
-    overflow-y:hidden;
+    color: var(--text-color);
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -16,7 +30,7 @@ header {
     display: flex;
     position: fixed;
     flex-direction: row;
-    background-color: rgb(15, 15, 15, 0.7);
+    background-color: var(--hf-color);
     height: 50px;
     width: 100%;
     z-index: 2;
@@ -24,7 +38,7 @@ header {
 
 .logo {
     margin: auto;
-    color: white;
+    color: var(--text-color);
     margin-bottom: 8px;
 }
 
@@ -45,13 +59,17 @@ header {
     border: none;
 }
 
+.theme:hover {
+    cursor: pointer;
+}
+
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
     'wght' 400,
     'GRAD' 0,
     'opsz' 48;
-    color: white;
+    color: var(--text-color);
 }
 
 
@@ -60,13 +78,15 @@ header {
 .container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     align-items: center;
     position: absolute;
     top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-left: 50px;
+  margin-left: 70px;
+    gap: 100px;
+    margin-right: 5px;
 }
 
 h2 {
@@ -74,32 +94,85 @@ h2 {
     font-size: 100px;
     font-weight: 700;
     width: 50vw;
-    cursor: default;
+    cursor: defpault;
     position: relative;
 }
 
-.arrowBtn {
-    display: block;
-    margin-left: auto;
+.signup {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
 }
 
-.arrow {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 700,
-    'GRAD' 0,
-    'opsz' 48;
-    color: white;
-    scale: 8;
-    
-    margin-right: 280px;
-    animation: backnforth 3s ease-in-out infinite;
+.signup > h3 {
+    font-size: 25px;
 }
 
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px 30px;
+}
+
+.form > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+input {
+    color: var(--text-color);
+    font-size: 18px;
+    height: 2rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: none;
+    padding: 0 8px 0 8px;
+    width: 180px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.submit {
+    background: none;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 700;
+    height: 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    width: 100px;
+    margin-top: 10px;
+    background-size: 400% 100%;
+    transition: all .1s;
+}
+
+.submit:hover {
+    scale: 1.05;
+    cursor: pointer;
+    background-position: 100% 0;
+}
+
+/* BACKGROUND */
 
 #tracker {
     background: linear-gradient(to right, rgb(110, 182, 204), rgb(13, 71, 188));
-    height: 500px;
+    height: 1200px;
     aspect-ratio: 1;
     position: absolute;
     left: 50%;
@@ -140,7 +213,6 @@ h2 {
 }
 
 
-
 /* FOOTER */
 
 #reficon {
@@ -165,12 +237,12 @@ h2 {
     left:0;
     right:0;
     height: 30px;
-    background-color: rgb(15, 15, 15, 0.7);
+    background-color: var(--hf-color);
   }
   
   .fa-github {
     scale: 1.5;
-    color: white;
+    color: var(--text-color);
   }
   
   .fa-github:hover {
@@ -178,4 +250,40 @@ h2 {
     scale: 1.7;
     rotate: 360deg;
     cursor: pointer;
+  }
+
+  /* SCREEN ADJUSTMENTS */
+
+  @media (max-width: 1300px) {
+        .container {
+            flex-direction: column;
+            margin: auto;
+            gap: 5vh;
+        }
+        h2 {
+            width: 90vw;
+            font-size: 6vw;
+            text-align: center;
+            margin: auto;
+        }
+  }
+
+  @media (max-width: 550px) {
+        .signup {
+            width: 85vw;
+            height: 55vh;
+        }
+        .form {
+            gap: 5vw;
+        }
+        input {
+            width: 32vw;
+            min-width: 40px;
+            height: 4vh;
+            min-width: 20px;
+        }
+        label {
+            font-size:calc(8px + 1.3vw);
+
+        }
   }
