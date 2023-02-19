@@ -20,5 +20,5 @@
 ### Built With
 
 * HTML
-* CSS (Flexbox)
+* CSS
 * JavaScript
