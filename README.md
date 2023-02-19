@@ -4,9 +4,9 @@
   <img src="/readme-images/dark.png" width="400" alt="project pic">
   <img src="/readme-images/light.png" width="400" alt="project pic">
 </p>
-<h2 align="center">
+<h3 align="center">
 <a href="https://baheerpayab.github.io/glow-sign-up/">Live Demo</a>
-</h2>
+</h3>
 
 ### Project
 
